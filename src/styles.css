@@ -1,3 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --light: rgb(238, 236, 236);
+  --black: #000;
+  --coral: #ff5757;
+}
+
 body {
-  background-color: blueviolet;
+  background-color: var(--light);
+  margin: 0px;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  top: 0;
+  position: sticky;
+  background-color: var(--light);
+  padding: 5px 15px;
+  height: 60px;
+  z-index: 1000;
+}
+
+#logo {
+  width: 5rem;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav > button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+
+nav > button:hover, nav > button:focus, nav > button:active {
+  color: var(--light);
+  background-color: var(--black);
+}
+
+img#rest1 {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  clip: rect(0px,50px,100px,0px);
+  max-width: 100%;
+}
+
+#menu-content, #lunch-dinner-buttons, #about > h3, #about > p, #contact-hours {
+  margin: 25px;
+}
+
+#lunch-btn, #dinner-btn {
+  border: 1px solid var(--black);
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  transition: .3s;
+  padding: 8px 16px;
+  color: var(--black);
+}
+
+#dinner-btn {
+  margin-left: 10px;
+}
+
+#lunch-btn:focus, #lunch-btn:hover, #dinner-btn:focus, #dinner-btn:hover {
+  background: var(--black);
+  color: var(--light);
+}
+
+#about {
+  background-color: var(--black);
+  color: var(--light);
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+#contact-hours {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.vertical-line {
+  width: 1px;
+  background-color: var(--black);
+  height: auto;
+  min-height: 240px;
+  margin: 20px 30px;
 }
